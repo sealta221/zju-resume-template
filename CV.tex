@@ -1,6 +1,5 @@
 \documentclass[11pt]{article}
 
-
 \setlength{\parindent}{0pt}
 \usepackage{xltxtra}
 \usepackage{hyperref}
@@ -18,7 +17,6 @@
 \usepackage{enumitem}
 \CJKsetecglue{} %% 取消中文与数字之间的间隙
 
-
 %% 主文档字体设置
 \setmainfont[
     Path = fonts/Main/,
@@ -32,7 +30,6 @@
     Extension = .ttf,
     BoldFont = NotoSansSC-Bold.ttf, % 加粗字体
 ]{NotoSansSC-Regular.otf} % 正文字体
-
 
 \usepackage{relsize}
 \usepackage{xspace}
@@ -75,7 +72,6 @@
 
 % =======================================================================
 
-
 \titleformat{\section}         % 定制 \section 命令 
 {\large\bfseries\raggedright} % 将 section 标题设置为大号、粗体且左对齐
 {}{0em}                      % 可用于为所有 section 添加前缀（如“章节...”）
@@ -84,72 +80,64 @@
 \titlespacing*{\section}{0cm}{*1.6}{*1.2}
 
 
-
 \begin{document}
 \pagenumbering{gobble}
 
-%%%% 利用tikz来定位照片
+%%%% 利用tikz来定位照片 (如需使用个人照片，请确保路径下有 avatar.jpg)
 \begin{tikzpicture}[remember picture, overlay] 
     \node[anchor = north east] at ($(current page.north east)+(-2cm,-1.2cm)$) {\includegraphics[height=3cm]{avatar.jpg}};
   \end{tikzpicture}%
-  %%%% 利用tikz来定位学校Logo，这里只在第一页显示
+  %%%% 利用tikz来定位学校Logo (如需使用浙大Logo，请确保路径下有 zju.png)
   \begin{tikzpicture}[remember picture, overlay] 
     \node[anchor = north west] at ($(current page.north west)+(0.5cm,+1.0cm)$) {\includegraphics[height=6cm]{zju.png}};
   \end{tikzpicture}%
-\centerline{\LARGE\bfseries{胡豆}} 
+\centerline{\LARGE\bfseries{邵楷城}} 
 
-\centerline{\normalsize{\faPhone\ 111-1111-1111 \quad \faEnvelopeO\ \href{mailto:3230100000@zju.edu.cn}{3230100000@zju.edu.cn}}} 
-
-\centerline{\normalsize{\faGithubSquare\ \href{https://github.com/maksymilan}{https://github.com/maksymilan} \quad \faRssSquare\ \href{https://maksymilan.github.io/}{https://maksymilan.github.io}}} 
+\centerline{\normalsize{\faPhone\ 13567814497 \quad \faEnvelopeO\ \href{mailto:1350843130@qq.com}{1350843130@qq.com} \quad \faMapMarker\ 浙江省宁波市}} 
     
 \section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育背景}    
-\textbf{浙江大学} \hfill 2023.9 -- 至今\\[0.5em] % 标题和正文间加一点距离
-计算机科学与技术\quad 大二 
+\textbf{浙江大学} \hfill 2024.09 -- 至今\\[0.5em] 
+软件学院 \quad 电子信息（人工智能方向） \quad 硕士（在读） 
 \begin{itemize}[nosep]
-    \item 相关课程：《烂坑挖掘及基础》、《高级挖坑技巧》、《烂坑数理统计》
+    \item \textbf{所在实验室：} 交互数据分析团队 ZJUIDG（隶属于计算机辅助设计与图形系统 (CAD\&CG) 全国重点实验室）
+\end{itemize}
+
+\projectsep
+
+\textbf{杭州电子科技大学} \hfill 2020.09 -- 2024.06\\[0.5em] 
+计算机科学与技术 \quad 本科 
+\begin{itemize}[nosep]
+    \item \textbf{专业成绩：} GPA: 4.04/5.00，专业排名前25\%
+    \item \textbf{主修课程：} 线性代数(94)、高等数学(92)、数据结构(89)、离散数学(88)、计算机网络(86)、人工智能导论(85)
 \end{itemize}
 
 \section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ 项目经历}
 
 % --- 第一个项目 ---
-% 将标题行末尾的 \\ 替换为 \titlebreak 命令
-\textbf{98烂坑风控与可视化作战平台} \hfill 2024.08 -- 至今 \titlebreak
-项目描述：为维护cc98社区的讨论纯度、净化“心灵之约”版块风气，本项目旨在对“烂坑”进行科学、严谨的量化分析，并引入\textbf{大语言模型(LLM)}对烂坑帖进行\textbf{自动化情感极性与“离谱指数”标注}。
-% 在 itemize 的选项中，使用 topsep=\intraProjectListTopSep 来控制上边距
+\textbf{大唐-光伏电站多源融合系统 (校企合作)} \hfill 2024.07 -- 2024.11 \titlebreak
+项目描述：与大唐集团合作，围绕光伏时序大数据展开，涵盖数据治理、异常识别、故障诊断和可视化平台开发四个核心方向，旨在提升光伏电站的管理与诊断效率。
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{数据与后端}：运用 \textbf{Go} 语言及 \textbf{GORM} 框架，实现对全站“烂坑”帖的7x24小时全天候\textbf{抓取}与\textbf{入库}(MySQL)。
-    \item \textbf{可视化前端}：采用原生 \textbf{HTML/CSS/JS} 构建了“烂坑”实时监控\textbf{作战大屏}。实现了坑主成分分析、挖坑热力图、年度烂坑王榜单等\textbf{可视化图表}，并通过 \textbf{AJAX} 异步刷新，确保数据洞察的实时性。
-    \item \textbf{核心产出}：全面掌握了从\textbf{数据采集、清洗、LLM标注到可视化分析}的“反烂坑”全链路技术。
+    \item \textbf{模型训练与优化：} 负责光伏电站图纸数据的预处理与模型构建，应用多种深度学习算法（结合时序与图像特征的多模态分析）识别组串异常，显著提升模型故障诊断性能。
+    \item \textbf{数据治理协助：} 配合团队采用分层架构和自适应算法进行数据清洗，提升原始数据质量。
+    \item \textbf{方案撰写：} 独立负责并完成该合作项目投标书的技术方案撰写与梳理工作。
 \end{itemize}
 
-% 使用 \projectsep 命令来分隔两个项目
 \projectsep
 
 % --- 第二个项目 ---
-\textbf{AIGC驱动的超进化自动挖坑机 (Agent)} \hfill 2025.02 -- 至今 \titlebreak
-项目描述：为探索心灵版规的边界，以及测试版主锁沉反应速度的极限，本项目基于\textbf{多智能体协作(MCP)与LLM}技术，开发了一款能\textbf{自主“挖坑”与“互坑”}的AI Agent。
+\textbf{基于多层注意力机制的多图融合交通流量预测方法} \hfill 2024.01 -- 2024.03 \titlebreak
+项目描述：本科优秀毕业设计项目。针对复杂交通网络场景，提出一种基于多层注意力机制与多图融合的创新预测框架，实现高精度的交通流量预测。
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{并发与调度}：后端采用 \textbf{Go} 语言，充分利用 \textbf{Goroutine} 和 \textbf{Channel} 的高并发模型，模拟\textbf{用户并发在线}，执行定时挖坑，确保挖坑行动的\textbf{隐蔽性}与\textbf{高效性}。
-    \item \textbf{实时监控与响应}：运用 \textbf{WebSocket} 协议实现了对目标帖子的\textbf{实时监听与交互}。确保在烂坑被识破的第一时间，Agent能光速完成\textbf{“lktp”}或\textbf{反向钓鱼}操作，展现出极高的AI博弈能力。
-    \item \textbf{可视化GUI}：前端使用 \textbf{React} 框架构建了\textbf{后台管理的可视化面板 (Admin Panel)}。可一键下达挖坑指令、动态调整Agent的\textbf{指令}、并实时监控数据。
+    \item \textbf{算法创新与实现：} 提出一种计算道路功能相似性的新算法，构建并融合两种不同关系的图网络；在聚合信息后，同步提取短时序与全局时序信息。
+    \item \textbf{模型复现与调优：} 深入调研并学习图卷积神经网络 (GCN) 相关前沿文献，熟练运用 PyTorch 框架独立完成深度学习模型的搭建、训练、复现与效果完善。
+    \item \textbf{全流程实践：} 完整掌握并实践了从数据获取、图网络构建、多层注意力机制设计到模型评估的深度学习开发全流程。
 \end{itemize}
 
-\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 技术栈}
+\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 技能特长}
 \begin{itemize}[nosep]
-    \item \textbf{编程语言：} \textbf{Go}, Python, C++
-    \item \textbf{开发工具：} SSH, Git, Vim, MakeFile,LaTex
-    \item \textbf{操作系统：} Linux
+    \item \textbf{编程语言：} 熟练掌握 Python、C/C++
+    \item \textbf{算法与框架：} 熟悉 PyTorch 等主流深度学习框架；对图卷积神经网络 (GCN)、注意力机制及多模态特征融合有深入理解与实战经验。
+    \item \textbf{英语能力：} CET-6 (504分)；CET-4 (529分)；考研英语一 (88分)，具备流畅的英文学术文献阅读与技术文档查阅能力。
 \end{itemize}
-\section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faList}\ 获奖情况}
-\begin{itemize}
-    \item CC98年度用户 \hfill 2023.12
-    
-\end{itemize}
-    
-\section{\makebox[\widthof{\faInfo}][c]{\color{CVBlue}\faInfo}\ 其他}
-\begin{itemize}[parsep=0.5ex]
-    \item \textbf{技术博客：} \href{https://maksymilan.github.io/}{https://maksymilan.github.io/}
-    \item \textbf{GitHub：} \href{https://github.com/maksymilan}{https://github.com/maksymilan} 
-    \item \textbf{英语水平：} CET-4, CET-6
-\end{itemize}
+
 \end{document}
