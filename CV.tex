@@ -91,15 +91,22 @@
   \begin{tikzpicture}[remember picture, overlay] 
     \node[anchor = north west] at ($(current page.north west)+(0.5cm,+1.0cm)$) {\includegraphics[height=6cm]{zju.png}};
   \end{tikzpicture}%
+\vspace*{0.1cm}
 \centerline{\LARGE\bfseries{邵楷城}} 
-
+\vspace{0.5em}
+\centerline{\normalsize{\textbf{求职意向：}Agent开发（实习）}} 
+\vspace{0.5em}
 \centerline{\normalsize{\faPhone\ 13567814497 \quad \faEnvelopeO\ \href{mailto:1350843130@qq.com}{1350843130@qq.com} \quad \faMapMarker\ 浙江省宁波市}} 
+\vspace{0.6cm}
     
 \section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育背景}    
 \textbf{浙江大学} \hfill 2024.09 -- 至今\\[0.5em] 
-电子信息（人工智能方向） \quad 硕士（在读） \quad 交互数据分析团队 ZJUIDG（隶属计算机辅助设计与图形系统 (CAD\&CG) 全国重点实验室）
+电子信息（人工智能方向） \quad 硕士（在读） \
 \begin{itemize}[nosep]
-    \item \textbf{获奖情况：}浙江大学优秀研究生，浙江大学五好研究生，一等助学金
+    \item \交互数据分析团队 ZJUIDG（隶属于计算机辅助设计与图形系统 (CAD\&CG) 全国重点实验室）
+\end{itemize}
+\begin{itemize}[nosep]
+    \item \textbf{获奖情况：}浙江大学优秀研究生，五好研究生，一等助学金
 \end{itemize}
 
 \projectsep
@@ -123,12 +130,12 @@
 \projectsep
 
 % --- 第二个项目 ---
-\textbf{TSEditor：面向隐私保护的交互式时序可视分析系统 (ACM CHI 三作)} \hfill 2025.03 -- 2025.10 \titlebreak
-项目描述：针对时间序列数据公开发布中的隐私泄露隐患，研发一套支持多维协同可视与实时反馈的交互式系统，实现数据可用性与隐私保护的精细平衡。（相关成果已被人机交互顶会 \textbf{ACM CHI / CCF-A类} 录用）
+\textbf{TSEditor：面向隐私保护的交互式时序可视分析系统 (ACM CHI 共作)} \hfill 2025.03 -- 2025.10 \titlebreak
+项目描述：针对时间序列公开发布中的隐私泄露隐患，研发一套支持多维协同可视与智能辅助的系统，实现数据可用性与隐私保护的精细平衡。（相关成果已被顶会 \textbf{ACM CHI / CCF-A类} 录用）
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{全栈开发与开源部署：} 采用 Vue、Pinia 与 TailwindCSS 构建高交互前端界面，后端基于 Python、Flask 与 NumPy 搭建高效的数据处理模块，完成系统线上部署并将核心代码开源至 GitHub。
-    \item \textbf{复杂可视化与交互实现：} 深度应用 D3.js 研发矩阵图、径向图等 6 个核心协同视图，实现时间/数值扰动、克隆生成等直接操作（Direct Manipulation）机制，大幅降低分析师认知负载。
-    \item \textbf{有效性验证与评估：} 参与设计并执行模型评测（下游预测模型MSE波动仅0.89\%）与包含 12 名用户的系统可用性测试（SUS评分高达 85.5），有效验证了系统在消除隐私风险的同时保障了极高的数据效用 [cite: 1]。
+    \item \textbf{AI 驱动的全栈开发 (Vibe Coding)：} 深度实践 Vibe Coding 开发范式，将 \textbf{Cursor} 作为核心 AI 编程助手，通过提示词与大模型高频交互，敏捷完成了系统前端 (Vue/D3.js) 与后端 (Flask/Python) 的复杂逻辑构建与迭代，极大地提升了研发效能。
+    \item \textbf{自动化辅助与智能生成：} 针对时序特点，设计了“数据驱动生成 (Data-driven Generation)”与“自动辅助 (Automated Assistance)”模块。系统能基于数据特征自动推荐编辑保护策略，并支持跨时序特征的智能匹配与模式克隆。
+    \item \textbf{交互实现与效用评估：} 实现了基于直接操作 (Direct Manipulation) 的时间/数值智能扰动机制；深度参与设计并执行下游预测模型评测（保证极高数据可用性，MSE波动仅0.89\%）与用户可用性测试，并完成核心代码的开源部署。
 \end{itemize}
 
 \section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 技能特长}
